@@ -202,7 +202,7 @@
     }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 3rem;
       margin-bottom: 8rem;
     }
@@ -244,7 +244,7 @@
     }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2.5rem;
       margin-top: 3rem;
     }
@@ -338,11 +338,72 @@
       50% { transform: scale(1.1); }
     }
 
+    /* Mobile Responsive - Mudassir Tech Solutions */
     @media (max-width: 768px) {
+      .header {
+        padding: 1rem 5%;
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+      }
+      .logo { font-size: 1.6rem; justify-content: center; }
+      nav { 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 0.8rem 1.5rem;
+      }
+      nav a { margin: 0; font-size: 0.75rem; }
+      
+      .hero { padding: 3rem 1rem 2rem; margin-bottom: 3rem; }
       .hero h1 { font-size: 2.5rem; }
-      nav { display: none; }
-      .doctor-section { padding: 3rem 2rem; }
-      .stats { gap: 2rem; }
+      .hero .tagline { font-size: 1.2rem; }
+      .hero p { font-size: 1rem; padding: 0 0.5rem; margin-bottom: 2rem; }
+      .btn { padding: 1.1rem 2rem; font-size: 0.95rem; }
+      
+      .container { padding: 2rem 5%; }
+      .doctor-section { padding: 2.5rem 1.2rem; margin-bottom: 4rem; border-radius: 20px; }
+      .doctor-icon { width: 100px; height: 100px; font-size: 2.5rem; }
+      .doctor-section h2 { font-size: 2rem; }
+      .doctor-section h3 { font-size: 1.3rem; }
+      .doctor-section p { font-size: 0.95rem; line-height: 1.8; }
+      .stats { gap: 1.5rem; }
+      .stat-number { font-size: 2.2rem; }
+      .stat-label { font-size: 0.8rem; }
+      
+      .section-title { font-size: 2rem; margin-bottom: 0.5rem; }
+      .section-subtitle { font-size: 1rem; margin-bottom: 2.5rem; }
+      .services-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 4rem; }
+      .service-card { padding: 2rem 1.2rem; border-radius: 16px; }
+      .service-icon { font-size: 2.8rem; }
+      .service-card h3 { font-size: 1.4rem; }
+      .service-card p { font-size: 1rem; }
+      
+      .gallery-section { padding: 2.5rem 1.2rem; margin-bottom: 4rem; border-radius: 20px; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .gallery-item img { height: 200px; }
+      .gallery-content { padding: 1.5rem; }
+      .gallery-content h4 { font-size: 1.3rem; }
+      
+      .contact-section { 
+        padding: 2.5rem 1.2rem; 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+        border-radius: 20px;
+      }
+      .contact-item h4 { font-size: 0.9rem; margin-bottom: 0.8rem; }
+      .contact-item p, .contact-item a { font-size: 1.2rem; }
+      
+      .footer { padding: 3rem 5%; margin-top: 4rem; }
+      .footer p { font-size: 0.95rem; }
+      .whatsapp-float { width: 55px; height: 55px; font-size: 1.6rem; bottom: 15px; right: 15px; }
+    }
+
+    /* Chote phone ke liye extra */
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 2rem; }
+      .btn { width: 90%; padding: 1rem; }
+      .stat-number { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -363,8 +424,8 @@
       <h1>AL SHIFA CLINIC</h1>
       <div class="tagline">Advanced Healthcare with Compassion</div>
       <p>Under the Expert Care of Dr. Bahadur Ali Arain | MBBS, FCPS</p>
-      <a href=https://wa.me/923368296603 class="btn">
-        <i class="fab fa-whatsapp"></i> Book Appointment: 0336-8296603
+      <a href="tel:03368296603" class="btn">
+        <i class="fas fa-phone"></i> Book Appointment: 0336-8296603
       </a>
     </section>
 
@@ -443,7 +504,6 @@
               <h4>Modern Reception</h4>
               <p>Welcoming & comfortable waiting area for patients</p>
             </div>
-          </div>
           <div class="gallery-item">
             <img src="https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clinic Exterior Building">
             <div class="gallery-content">
@@ -460,7 +520,7 @@
           </div>
         </div>
         <p style="text-align: center; color: var(--text-dim); margin-top: 2rem; font-size: 0.9rem;">
-          <i class="fas fa-info-circle"></i> Replace these with your actual clinic photos from Google
+          <i class="fas fa-info-circle"></i> Replace these with your actual clinic photos
         </p>
       </section>
 
@@ -501,6 +561,7 @@
     <p>© 2026 AL Shifa Clinic. All Rights Reserved.</p>
     <p>Owned & Operated by Dr. Bahadur Ali Arain | MBBS, FCPS</p>
     <p>Street No. 2, Ghumanabad, Halanaka, Hyderabad | 0336-8296603</p>
+    <p style="font-size:0.8rem; opacity:0.6; margin-top:1rem;">Designed by Mudassir Tech Solutions</p>
   </footer>
 
   <a href="https://wa.me/923368296603" class="whatsapp-float" target="_blank">
